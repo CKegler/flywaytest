@@ -1,6 +1,6 @@
-package com.example.myapp.rest
+package com.example.flywaytest.rest
 
-import com.example.myapp.model.CatalogEntry
+import com.example.flywaytest.model.CatalogEntry
 import javax.ws.rs.GET
 import javax.ws.rs.Path
 
