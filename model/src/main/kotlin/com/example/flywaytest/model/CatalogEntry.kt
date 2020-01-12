@@ -1,8 +1,9 @@
 package com.example.flywaytest.model
 
 import io.swagger.annotations.ApiModelProperty
+import org.apache.commons.lang3.builder.CompareToBuilder
 import java.time.LocalDateTime
-import java.util.UUID
+import java.util.*
 
 data class CatalogEntry(
         @ApiModelProperty(
@@ -23,10 +24,8 @@ data class CatalogEntry(
         val updatedBy: UUID?,
         val updatedOn: LocalDateTime?
 ) : Comparable<CatalogEntry> {
+
     override fun compareTo(other: CatalogEntry): Int {
-        if (this.createdOn == other.createdOn) {
-            return 0
-        }
-        return if (this.createdOn > other.createdOn) 1 else -1
+        return CompareToBuilder.reflectionCompare(this, other)
     }
 }

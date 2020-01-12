@@ -11,5 +11,18 @@
 
     <artifactId>core</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>dao</artifactId>
+            <version>${project.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>model</artifactId>
+            <version>${project.version}</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 </project>
